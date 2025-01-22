@@ -6,6 +6,9 @@ description: |-
 ---
 
 # function: yaml_validate
+
+A utility function to validate a YAML string against a JSON schema to ensure it complies to the specification. Can be used to validate variables, files read with `file()`, or to test the structure of outputs.
+
 ## Example Usage
 
 ```terraform
@@ -13,7 +16,7 @@ locals {
   schema = <<-EOT
 {
   "$id": "pets-schema.json",
-  "$schema": "http://json-schema.org/draft-03/schema",
+  "$schema": "http://json-schema.org/draft-07/schema",
   "type": "object",
   "properties": {
     "pets": {
@@ -72,3 +75,6 @@ yaml_validate(input string, schema string) string
 1. `input` (String) A YAML string to be validated.
 1. `schema` (String) The JSON schema to validate the yaml against.
 
+## Return Value
+
+`yaml_validate` will return the YAML string if validation is successful.
