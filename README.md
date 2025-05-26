@@ -24,7 +24,7 @@ Additional documentation, including available resources and their arguments/attr
 
 ## Included functions
 - [`yaml_validate`](docs/functions/yaml_validate.md) check a YAML string against a JSON schema for compliance.
-
+- [`string_filter_trim`](docs/functions/string_filter_trim.md) Trim a string to at most the given length, first removing one or more given prefixes/suffixes.
 
 ## Developing the Provider
 
