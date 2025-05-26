@@ -62,6 +62,7 @@ func (p *UtilsProvider) DataSources(ctx context.Context) []func() datasource.Dat
 func (p *UtilsProvider) Functions(ctx context.Context) []func() function.Function {
 	return []func() function.Function{
 		NewYamlValidateFunction,
+		NewTrimStringFunction,
 	}
 }
 
